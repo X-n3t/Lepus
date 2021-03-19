@@ -1,25 +1,30 @@
+# Version 3.3.2
+1. Fixed requirements.txt
+2. Updated formatting
+3. Updated readme to match removal of permutations 
+
 # Version 3.3.1
 
-### --- New Features
+##  New Features
 1. Added history on diff log
 
-### --- Bug Fixes
+##  Bug Fixes
 1. Fixed a bug on the Slack messaging mechanism
 
-### --- Misc
+##  Misc
 1. Updated requirements.txt
 
 # Version 3.3.0
 
-### --- New Features
+##  New Features
 1. Added various new signatures for takeover identification
 2. Added the ability to have more than one signature per service 
 3. Added new permutation function for numeric iteration
 
-### --- Bug Fixes
+##  Bug Fixes
 1. Fixed the Spyse collector so that it's working due to changes in the API
 
-### --- Misc
+##  Misc
 1. Changed handling of permutations so now they happen in chunks
 2. Changed handling of wildcard identification to use chunks
 3. Memory handling is a lot better
@@ -27,25 +32,25 @@
 
 # Version 3.2.2
 
-### --- New Features
+##  New Features
 1. Display location information on networks identified by the RDAP submodule
 2. Diff between runs against the same domain
 
-### --- Misc
+##  Misc
 1. Various enhancements on export functionality
 2. Updated README.md
 3. Updated requirements.txt
 
 # Version 3.2.1
 
-### --- New Features
+##  New Features
 1. Slack notifications on new potential takeovers
 2. Export of findings
 
-### --- Bug Fixes
+##  Bug Fixes
 1. Fixed a logic bug on the handling of old findings
 
-### --- Misc
+##  Misc
 1. Database improvements
 2. Removed DNSDB collector
 3. Updated README.md
@@ -53,17 +58,17 @@
 
 # Version 3.2.0
 
-### --- New Features
+##  New Features
 1. SQLite integration
 2. IPv6 support
 3. Memory management improvements
 4. Spyse API collector
 
-### --- Bug Fixes
+##  Bug Fixes
 1. Fixed an issue on the wildcard identification logic
 2. Fixed a logic bug on the CertSpotter collector
 
-### --- Misc
+##  Misc
 1. Updated README.md
 2. Updated requirements.txt
 3. Updated .gitignore
@@ -73,13 +78,13 @@
 
 # Version 3.1.0
 
-### --- New Features
+##  New Features
 1. Added Takeover module
 2. Implemented chunking in places were it wasn't present but might be needed
 3. Progress bars now appear on the same line as different chunks are processed
 4. Added ports 9943 and 9980 in the "huge" preset for the portscan module
 
-### --- Bug Fixes
+##  Bug Fixes
 1. Fix in Censys collector regarding pagination and false positives
 2. Fix in DNSDB collector - error handling to account for cloudflare changes
 3. Fix in Riddler collector - error handling when 500 internal server error occurs
@@ -87,7 +92,7 @@
 5. Fix in CRT collector - account for 504 server response when the query times out
 6. Fix a bug during wildcard identification that didn't allow for threads to finish properly
 
-### --- Misc
+##  Misc
 1. Updated README.md for Portscan and Takeover
 2. Updated requirements.txt to account for new cloudflare bypass
 3. Portscan module - slight change due to my OCDs
@@ -96,27 +101,27 @@
 
 # Version 3.0.2
 
-### --- New Features
+##  New Features
 1. Added Project Sonar collector
 2. Re-implemented DNSDB collector with CF Anti-DDOS bypass
 3. URLs generated from the Port Scan module are now also printed on the console
 
-### --- Bug Fixes
+##  Bug Fixes
 1. Fixed a bug on Port Scan module where URLs were not generated correctly
 
-### --- Misc
+##  Misc
 1. Updated requirements.txt
 2. Updated README.md
 
 # Version 3.0.1
 
-### --- New Features
+##  New Features
 1. Support for Python 3
 
-### --- Bug Fixes
+##  Bug Fixes
 1. Exception handling on CRT.sh collector
 
-### --- Misc
+##  Misc
 1. Added BSD-3 Clause LICENSE
 2. Added CHANGELOG.md
 3. Updated README.md
@@ -126,23 +131,23 @@
 
 # Version 2.3.7
 
-### --- New Features
+##  New Features
 1. Historic diff logs
 
-### --- Bug Fixes
+##  Bug Fixes
 1. Double allocations in permutations
 
-### --- Misc
+##  Misc
 1. Minor tweak on permutations
 2. Updated requirements.txt
 3. New subdomain wordlist
 
 # Version 2.3.6
 
-### --- New Features
+##  New Features
 1. Replaced ASN and WHOIS modules with a single module that performs RDAP lookups
 
-### --- Misc
+##  Misc
 1. Added diff checks on wildcard identification
 2. Moved diff check with old findings before the execution of RDAP module
 3. Changed some output in order to be consistent across all modules
@@ -150,60 +155,60 @@
 
 # Version 2.3.5
 
-### --- Bug Fixes
+##  Bug Fixes
 1. Improved exception handling for Riddler collector
 2. Redesigned the wildcard identification to catch true negatives that were missed
 
-### --- Misc
+##  Misc
 1. Added .gitignore
 
 # Version 2.3.4
 
-### --- Bug Fixes
+##  Bug Fixes
 1. Improved exception handling
 2. Fixed a bug on argument validity checks
 3. Fixed a bug on wildcard identification
 
-### --- Misc
+##  Misc
 1. Updated requirements.txt
 2. Updated README.md
 
 # Version 2.3.3
 
-### --- New Features
+##  New Features
 1. Added zone transfer capability
-2. Added reverse lookups on IP ranges (-r, --ranges)
+2. Added reverse lookups on IP ranges (`-r`, `--ranges`)
 3. Added validity checks on provided arguments
 4. Added chunk support on reverse lookups
 5. Added chunk support on port scan
 
-### --- Bug Fixes
+##  Bug Fixes
 1. Fixed a bug on wildcard checks
 2. Fixed a bug on diff checks with old results
 
-### --- Misc
+##  Misc
 1. Utilities code redesign
 2. Updated README.md
 
 # Version 2.2.5
 
-### --- New Features
+##  New Features
 1. Entrust Certificates collector
 2. CertSpotter collector
 3. SSL identification on portscan & url generation
 4. Reverse DNS submodule
 5. Diff on resolved domains from previous run
 
-### --- Bug Fixes
+##  Bug Fixes
 1. Rewrite of the wildcard identification mechanism
 2. Exception handling on Censys collector
 3. Convert to lowercase and unique after final list is merged
 4. ASN and WHOIS checks are only performed on public resolved IPs
 
-### --- Misc
+##  Misc
 1. Updated requirements.txt
 2. Updated README.md
-3. Removed --show-wildcards option
+3. Removed `--show-wildcards` option
 4. Small additions to permutation wordlist
 5. Added top ~100k subdomains list under lists/
 6. Added functionality to save results from collectors
