@@ -5,11 +5,10 @@
 ## Lepus
 **Sub-domain finder**
 
-**Lepus** is a utility for identifying and collecting subdomains for a given domain. Subdomain discovery is a crucial part during the reconnaissance phase. It uses four (4) modes:
+**Lepus** is a utility for identifying and collecting subdomains for a given domain. Subdomain discovery is a crucial part during the reconnaissance phase. It uses three (3) modes:
 
 * Services (Collecting subdomains from the below services)
 * Dictionary mode for identifying domains (optional)
-* ~~Permutations on discovered subdomains (optional)~~ [Currently Broken]
 * Reverse DNS lookups on identified public IPs (optional)
 
 ### Wildcard Identification
@@ -78,10 +77,6 @@ VT_API_KEY=<YourVirusTotalAPIKey>
 ### Dictionary Mode
 
 A file can be given as an input to the `-w (--wordlist)` switch for performing a dictionary discovery. Forward DNS lookup is performed during this time for identifying subdomains.
-
-~~Permutations Mode~~ [Currently Broken]
-
-~~Permutations mode is enabled with the `--permutate` switch. A file can be given as an input to the `-pw (--permutation-wordlist)` switch for performing the permutations (default list is lists/words.txt). During this time, a number of permutations are applied on the already discovered subdomains.~~
 
 ### Reverse Mode
 
@@ -198,7 +193,7 @@ $ make altinstall
 
 ```
 usage: lepus.py [-h] [-w WORDLIST] [-hw] [-t THREADS] [-nc] [-zt]
-                [--permutate] [-pw PERMUTATION_WORDLIST] [--reverse]
+                [--reverse]
                 [-r RANGES] [--portscan] [-p PORTS] [--takeover] [-v]
                 domain
 
