@@ -7,4 +7,4 @@ requests==2.21.0
 shodan==1.11.1
 termcolor==1.1.0
 tqdm==4.31.1
-git+git://github.com/VeNoMouS/cloudflare-scrape-js2py@master#cfscrape
+git+git://github.com/Fran008/cloudflare-scrape-js2py@master#cfscrape
