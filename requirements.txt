@@ -7,4 +7,3 @@ slackclient
 sqlalchemy==1.3.16
 termcolor==1.1.0
 tqdm==4.46.0
-git+git://github.com/Fran008/cloudflare-scrape-js2py@master#cfscrape
