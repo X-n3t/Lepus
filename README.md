@@ -217,10 +217,6 @@ optional arguments:
                         number of threads [default is 100]
   -nc, --no-collectors  skip passive subdomain enumeration
   -zt, --zone-transfer  attempt to zone transfer from identified name servers
-  --permutate           perform permutations on resolved domains
-  -pw PERMUTATION_WORDLIST, --permutation-wordlist PERMUTATION_WORDLIST
-                        wordlist to perform permutations with [default is
-                        lists/words.txt]
   --reverse             perform reverse dns lookups on resolved public IP
                         addresses
   -r RANGES, --ranges RANGES
@@ -234,7 +230,3 @@ optional arguments:
                         overs
   -v, --version         show program's version number and exit
 ```
-
-### Example
-
-`python3.7 lepus.py python.org --wordlist lists/subdomains.txt --permutate --reverse --portscan -p huge --takeover`

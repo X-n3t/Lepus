@@ -21,7 +21,6 @@ import collectors.Spyse
 import collectors.ThreatCrowd
 import collectors.VirusTotal
 import collectors.WaybackMachine
-import submodules.Permutations
 import submodules.PortScan
 import submodules.ReverseLookups
 import submodules.TakeOver
@@ -49,8 +48,6 @@ if __name__ == "__main__":
 	parser.add_argument("-t", "--threads", action="store", dest="threads", help="number of threads [default is 100]", type=int, default=100)
 	parser.add_argument("-nc", "--no-collectors", action="store_true", dest="noCollectors", help="skip passive subdomain enumeration", default=False)
 	parser.add_argument("-zt", "--zone-transfer", action="store_true", dest="zoneTransfer", help="attempt to zone transfer from identified name servers", default=False)
-	parser.add_argument("--permutate", action="store_true", dest="permutate", help="perform permutations on resolved domains", default=False)
-	parser.add_argument("-pw", "--permutation-wordlist", dest="permutation_wordlist", help="wordlist to perform permutations with [default is lists/words.txt]", type=FileType("r"), default="lists/words.txt")
 	parser.add_argument("--reverse", action="store_true", dest="reverse", help="perform reverse dns lookups on resolved public IP addresses", default=False)
 	parser.add_argument("-r", "--ranges", action="store", dest="ranges", help="comma seperated ip ranges to perform reverse dns lookups on", type=str, default=None)
 	parser.add_argument("--portscan", action="store_true", dest="portscan", help="scan resolved public IP addresses for open ports", default=False)
@@ -118,9 +115,6 @@ if __name__ == "__main__":
 
 			del findings
 			collect()
-
-			if args.permutate:
-				submodules.Permutations.init(db, args.domain, args.permutation_wordlist, args.hideWildcards, args.threads)
 
 			if args.reverse:
 				submodules.ReverseLookups.init(db, args.domain, args.ranges, args.threads)
