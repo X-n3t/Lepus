@@ -24,9 +24,9 @@ The utility collects ASN and network information for the identified domains that
 
 The utility is collecting data from the following services:
 
-|Service|API Required|
-|---|:---:|
-|[Censys](https://censys.io/)|Yes|
+|Service|API Required|Extra Details|
+|---|:---:| --|
+|[Censys](https://censys.io/)|Yes| API Limited |
 |[CertSpotter](https://sslmate.com/certspotter/)|No|
 |[CRT](https://crt.sh/)|No|
 |[DNSTrails](https://securitytrails.com/dns-trails/)|Yes|
@@ -41,6 +41,7 @@ The utility is collecting data from the following services:
 |[ThreatCrowd](https://www.threatcrowd.org/)|No|
 |[VirusTotal](https://www.virustotal.com/)|Yes|
 |[Wayback Machine](https://archive.org/web/)|No|
+
 
 In a case that you want to consume services that support API keys then you have to place your API keys in the `config.ini` file.
 
@@ -78,9 +79,9 @@ VT_API_KEY=<YourVirusTotalAPIKey>
 
 A file can be given as an input to the `-w (--wordlist)` switch for performing a dictionary discovery. Forward DNS lookup is performed during this time for identifying subdomains.
 
-### Permutations Mode
+~~Permutations Mode~~ [Currently Broken]
 
-Permutations mode is enabled with the `--permutate` switch. A file can be given as an input to the `-pw (--permutation-wordlist)` switch for performing the permutations (default list is lists/words.txt). During this time, a number of permutations are applied on the already discovered subdomains.
+~~Permutations mode is enabled with the `--permutate` switch. A file can be given as an input to the `-pw (--permutation-wordlist)` switch for performing the permutations (default list is lists/words.txt). During this time, a number of permutations are applied on the already discovered subdomains.~~
 
 ### Reverse Mode
 
