@@ -9,7 +9,7 @@
 
 * Services (Collecting subdomains from the below services)
 * Dictionary mode for identifying domains (optional)
-* Permutations on discovered subdomains (optional)
+* ~~Permutations on discovered subdomains (optional)~~ [Currently Broken]
 * Reverse DNS lookups on identified public IPs (optional)
 
 ### Wildcard Identification
