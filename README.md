@@ -66,15 +66,18 @@ SHODAN_API_KEY=<YourShodanAPI>
 
 [VirusTotal]
 VT_API_KEY=<YourVirusTotalAPIKey>
+
+[Slack]
+SLACK_LEGACY_TOKEN=
+SLACK_CHANNEL=
+
+[Spyse]
+SPYSE_API_TOKEN=
 ```
 
 ### Dictionary Mode
 
 A file can be given as an input to the `-w (--wordlist)` switch for performing a dictionary discovery. Forward DNS lookup is performed during this time for identifying subdomains.
-
-### Permutations Mode
-
-Permutations mode is enabled with the `--permutate` switch. A file can be given as an input to the `-pw (--permutation-wordlist)` switch for performing the permutations (default list is lists/words.txt). During this time, a number of permutations are applied on the already discovered subdomains.
 
 ### Reverse Mode
 
