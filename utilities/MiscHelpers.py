@@ -9,10 +9,6 @@ from utilities.DatabaseHelpers import Record, Wildcard, Resolution, Unresolved, 
 
 
 def checkArgumentValidity(parser, args):
-	if args.permutation_wordlist and not args.permutate and args.permutation_wordlist.name != "lists/words.txt":
-		parser.print_usage()
-		print("lepus.py: error: argument -pw/--permutation-wordlist: missing required argument '--permutate'")
-		return False
 
 	if args.ranges and not args.reverse:
 		parser.print_usage()
