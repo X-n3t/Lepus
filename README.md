@@ -192,10 +192,10 @@ $ make altinstall
 ### Help
 
 ```
-usage: lepus.py [-h] [-w WORDLIST] [-hw] [-t THREADS] [-nc] [-zt]
-                [--reverse]
-                [-r RANGES] [--portscan] [-p PORTS] [--takeover] [-v]
-                domain
+usage: lepus.py [-h] [-w WORDLIST] [-hw] [-t THREADS] [-nc] [-zt] [--reverse] [--portscan] 
+[-p PORTS] [--takeover] [-v] domain
+
+e.g. python3 lepus.py domain.com 
 
 Infrastructure OSINT
 
