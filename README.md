@@ -80,13 +80,6 @@ VT_API_KEY=<YourVirusTotalAPIKey>
 SLACK_LEGACY_TOKEN=<YourSlackAPIKey>
 SLACK_CHANNEL=<YourSlackAPIKey>
 
-[Telegram]
-BOT_ID=<YourTelegramBotID>
-CHANNEL_ID=<YourTelegramChannelID>
-
-[Discord]
-WEBHOOK_URL=<YourDiscordWebhookURL>
-
 [Spyse]
 SPYSE_API_TOKEN=<YourSpyseAPIKey>
 
