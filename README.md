@@ -1,9 +1,16 @@
-[![GitHub License](https://img.shields.io/badge/License-BSD%203--Clause-informational.svg)](https://github.com/GKNSB/Lepus/blob/master/LICENSE)
+[![GitHub License](https://img.shields.io/badge/License-BSD%203--Clause-informational.svg)](https://github.com/ZephrFish/Lepus/blob/master/LICENSE)
 [![GitHub Python](https://img.shields.io/badge/Python-%3E=%203.6-informational.svg)](https://www.python.org/)
-[![GitHub Version](https://img.shields.io/badge/Version-3.3.2-green.svg)](https://github.com/GKNSB/Lepus)
+[![GitHub Version](https://img.shields.io/badge/Version-3.4.0-magenta.svg)](https://github.com/ZephrFish/Lepus)
 
-## Lepus
+## Lepus  
 **Sub-domain finder**
+
+### [ZephrFish](https://twitter.com/ZephrFish) Fork
+I have been using Lepus for a number of years as it is one of the better subdomain enumeration tools. I integrated some of the lessons learned from [DNS Queue](https://github.com/zephrfish/dns-parallel-prober) and added additional functionality to a project that had not been updated in over 2 years. So here is my forked edition with some fixes, additional features and active development to fix and add new things. If you want to help, make sure you document any pull requests :-).
+
+In addition to new featues, I have also added the dataset from research I did in 2015 and integrated various lists to make a master subdomains.txt list. 
+
+### About
 
 **Lepus** is a utility for identifying and collecting subdomains for a given domain. Subdomain discovery is a crucial part during the reconnaissance phase. It uses three (3) modes:
 
@@ -29,10 +36,10 @@ The utility is collecting data from the following services:
 |[CertSpotter](https://sslmate.com/certspotter/)|No|
 |[CRT](https://crt.sh/)|No|
 |[DNSTrails](https://securitytrails.com/dns-trails/)|Yes|
-|[Entrust Certificates](https://www.entrust.com/ct-search/)|No|
 |[Google Transparency](https://transparencyreport.google.com/)|No|
 |[HackerTarget](https://hackertarget.com/)|No|
 |[PassiveTotal](https://www.riskiq.com/products/passivetotal/)|Yes|
+|[Project Discovery Chaos](https://chaos.projectdiscovery.io/#/)|Yes|Invite Only API|
 |[Project Sonar](https://www.rapid7.com/research/project-sonar/)|No|
 |[Riddler](https://riddler.io/)|Yes|
 |[Shodan](https://www.shodan.io/)|Yes|
@@ -41,6 +48,9 @@ The utility is collecting data from the following services:
 |[VirusTotal](https://www.virustotal.com/)|Yes|
 |[Wayback Machine](https://archive.org/web/)|No|
 
+### Webhooks [Work In Progress]
+
+In addition to API integration, the tool also enables you to post content to various services such as Slack, Discord and Telegram. 
 
 In a case that you want to consume services that support API keys then you have to place your API keys in the `config.ini` file.
 
@@ -63,15 +73,25 @@ RIDDLER_PASSWORD=<YourRiddlerPassword>
 [Shodan]
 SHODAN_API_KEY=<YourShodanAPIKey>
 
-[Slack]
-SLACK_LEGACY_TOKEN=<YourSlackLegacyToken>
-SLACK_CHANNEL=<YourSlackChannel>
-
-[Spyse]
-SPYSE_API_TOKEN=<YourSpyseAPIToken>
-
 [VirusTotal]
 VT_API_KEY=<YourVirusTotalAPIKey>
+
+[Slack]
+SLACK_LEGACY_TOKEN=<YourSlackAPIKey>
+SLACK_CHANNEL=<YourSlackAPIKey>
+
+[Telegram]
+BOT_ID=<YourTelegramBotID>
+CHANNEL_ID=<YourTelegramChannelID>
+
+[Discord]
+WEBHOOK_URL=<YourDiscordWebhookURL>
+
+[Spyse]
+SPYSE_API_TOKEN=<YourSpyseAPIKey>
+
+[Chaos]
+CHAOS_KEY=<YourChaosAPIKey>
 ```
 
 ### Dictionary Mode

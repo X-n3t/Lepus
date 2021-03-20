@@ -18,7 +18,7 @@ def init(domain):
 
 	else:
 		parameters = {"domain": domain, "apikey": VT_API_KEY}
-		headers = {"user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.10; rv:52.0) Gecko/20100101 Firefox/52.0"}
+		headers = {"user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.150 Safari/537.36"}
 
 		try:
 			response = requests.get("https://www.virustotal.com/vtapi/v2/domain/report", params=parameters, headers=headers)

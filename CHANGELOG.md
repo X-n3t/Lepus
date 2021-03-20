@@ -1,4 +1,19 @@
+# Version 3.4.0 - [ZephrFish](https://twitter.com/ZephrFish) Fork
+
+## New Features
+1. Added integration with Project Discovery [Chaos API](https://chaos.projectdiscovery.io/#/)
+1. Added beginning of webhook integrations
+
+## Bug Fixes
+1. Removed entrust certificate search as API no longer supported
+
+## Misc
+1. Updated User Agent on all API collectors
+2. Updated README.md
+3. Collated subdomains.txt to add in previous research
+
 # Version 3.3.2
+##  Misc
 1. Fixed requirements.txt
 2. Updated formatting
 3. Updated readme to match removal of permutations 

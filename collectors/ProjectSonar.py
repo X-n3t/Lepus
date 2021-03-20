@@ -10,7 +10,7 @@ def init(domain):
 	print(colored("[*]-Searching Rapid7 Open Data...", "yellow"))
 
 	url = "http://dns.bufferover.run/dns?q=.{0}".format(domain)
-	headers = {"user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.10; rv:52.0) Gecko/20100101 Firefox/52.0"}
+	headers = {"user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.150 Safari/537.36"}
 
 	try:
 		response = requests.get(url, headers=headers)

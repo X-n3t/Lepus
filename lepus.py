@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-# 3.3.2
-# ZephrFish Patch
+# 3.4.0
+# @ZephrFish Fork
 from argparse import ArgumentParser, FileType
 from warnings import simplefilter
 from termcolor import colored
@@ -10,10 +10,10 @@ import collectors.Censys
 import collectors.CertSpotter
 import collectors.CRT
 import collectors.DNSTrails
-import collectors.EntrustCertificates
 import collectors.GoogleTransparency
 import collectors.HackerTarget
 import collectors.PassiveTotal
+import collectors.PDChaos
 import collectors.ProjectSonar
 import collectors.Riddler
 import collectors.Shodan
@@ -29,13 +29,13 @@ import utilities.MiscHelpers
 import utilities.ScanHelpers
 
 simplefilter("ignore")
-version = "3.3.2"
+version = "3.4.0"
 
 
 def printBanner():
-	print(colored("         ______  _____           ______", "yellow"))
-	print(colored(" |      |______ |_____) |     | (_____ ", "yellow"))
-	print(colored(" |_____ |______ |       |_____| ______)", "yellow"))
+	print(colored("         ______  _____           ______", "magenta"))
+	print(colored(" |      |______ |_____) |     | (_____ ", "magenta"))
+	print(colored(" |_____ |______ |       |_____| ______)", "magenta"))
 	print(colored("                                v{0}".format(version), "cyan"))
 	sleep(1)
 
@@ -83,10 +83,10 @@ if __name__ == "__main__":
 			collector_subdomains += collectors.CertSpotter.init(args.domain)
 			collector_subdomains += collectors.CRT.init(args.domain)
 			collector_subdomains += collectors.DNSTrails.init(args.domain)
-			collector_subdomains += collectors.EntrustCertificates.init(args.domain)
 			collector_subdomains += collectors.GoogleTransparency.init(args.domain)
 			collector_subdomains += collectors.HackerTarget.init(args.domain)
 			collector_subdomains += collectors.PassiveTotal.init(args.domain)
+			collector_subdomains += collectors.PDChaos.init(args.domain)
 			collector_subdomains += collectors.ProjectSonar.init(args.domain)
 			collector_subdomains += collectors.Riddler.init(args.domain)
 			collector_subdomains += collectors.Shodan.init(args.domain)
